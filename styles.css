@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.container{
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    height: 100vh;
+}
+.container> div{
+    border:1px solid wheat;
+}
+
+.logo{
+    width: 30px;
+    height: 30px;
+    margin:10px;
+    filter: invert(1); /* Invert the logo color */
+}
+.sidebarTitle {
+    display: flex;
+    align-items: center;
+    margin-bottom:30px;
+}
+
+.sidebarList:nth-child(7){
+    margin-top: 50px;
+}
+
+a, .sidebarList{
+    text-decoration: none;
+    color: burlywood;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.sidebarContainer{
+    grid-row: 1/span 2;
+    padding:15px;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.headerContainer{
+    background-color: rebeccapurple;
+    color: white;
+    padding-bottom:20px;
+}
+.searchbarContainer{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    height: 50%;
+}
+.pfp{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.searchbar{
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar > input[type=search]{
+    width: 80%;
+    height: 25px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.userContainer{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    justify-items: self-end;
+}
+.userContainer > h3{
+    justify-self: start;
+}
+
+.headerContent{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    height: 50%;
+}
+.headerTitle{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+}
+.headerTitle > .pfp{
+    height: 100%;
+    width: 90px;
+    margin: 0 20px 0 50px;
+}
+.headerText{
+    font-size: 1.5em;;
+}
+.headerBtnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+}
+.btn{
+    background-color: white;
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: #f0f0f0;
+}
+
+.contentContainer{
+    background-color: rgba(252, 219, 225, 0.596);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr;
+}
+
+.myProjects{
+    grid-row: 2/span 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    padding: 20px;
+}
+
+.project{
+    background-color: white;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-inline-start: 5px solid purple;
+    box-shadow: var(--box-shadow);
+}
+
+.project >h4{
+    align-self: center;
+    font-size: 18px;
+    margin-left:20px;
+}
+
+.project > p{
+    align-self: top;
+    font-size: 16px;
+    margin-left:20px;
+    
+}
+.projectIcons{
+    justify-self: self-end;
+    align-self: self-end;
+    margin-bottom: 20px;
+}
+
+.contentLogo{
+    width: 30px;
+    height: 30px;
+    margin:10px;
+    
+}
+#projectTitle, #announcementTitle, #trendingTitle{
+    margin:20px 20px;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+#projectTitle{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    
+}
+
+#announcementTitle{
+    grid-column: 2/3;
+}
+#trendingTitle{
+    grid-row: 3/4;
+}
+
+.announcementContent{
+    background-color: white;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 20px;
+    gap:10px;
+    margin:20px;
+    box-shadow: var(--box-shadow);
+}
+.announcementContent > div{
+    font-size: 12px;
+}
+
+.announcementContent > div{
+    border-bottom: 1px solid gray;
+}
+
+.announcementContent > div:nth-child(3){
+    border-bottom: 0px;
+}
+
+.trendingContent{
+    background-color: white;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 20px;
+    gap:10px;
+    margin:20px;
+    box-shadow: var(--box-shadow);
+}
+.trendingContent > div{
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+
+.trendingContent > div > h5 > p{
+    font-weight: normal;
+    font-size: 14px;
+    margin: 10px 0 ;
+    color: gray;
+}
